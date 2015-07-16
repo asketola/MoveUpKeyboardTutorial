@@ -29,24 +29,48 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kg3-UW-4T0">
                                 <rect key="frame" x="105" y="550" width="479" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="QPh-3w-XSN"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8FM-Lj-4Hx">
+                                <rect key="frame" x="105" y="512" width="479" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vSf-W5-vrm"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w75-hp-qp9">
+                                <rect key="frame" x="16" y="516" width="84" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="c8x-JL-hkd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Kg3-UW-4T0" firstAttribute="top" secondItem="8FM-Lj-4Hx" secondAttribute="bottom" constant="8" id="9Gf-SG-TV0"/>
                             <constraint firstItem="OSS-LN-T99" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FjI-Um-ld6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OSS-LN-T99" secondAttribute="bottom" constant="25" id="USm-Sv-2eb"/>
+                            <constraint firstItem="w75-hp-qp9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Wdz-gi-5dA"/>
+                            <constraint firstItem="8FM-Lj-4Hx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZLW-8S-efe"/>
                             <constraint firstAttribute="bottom" secondItem="Kg3-UW-4T0" secondAttribute="bottom" constant="20" symbolic="YES" id="bhi-pG-VBC"/>
                             <constraint firstItem="Kg3-UW-4T0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eOZ-if-01Z"/>
+                            <constraint firstItem="OSS-LN-T99" firstAttribute="top" secondItem="w75-hp-qp9" secondAttribute="bottom" constant="17" id="erp-B0-ECh"/>
+                            <constraint firstItem="8FM-Lj-4Hx" firstAttribute="leading" secondItem="w75-hp-qp9" secondAttribute="trailing" constant="5" id="lQA-8Y-btd"/>
                             <constraint firstItem="Kg3-UW-4T0" firstAttribute="leading" secondItem="OSS-LN-T99" secondAttribute="trailing" constant="8" symbolic="YES" id="yfP-gn-Hrb"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="textField" destination="Kg3-UW-4T0" id="g0R-mS-P2a"/>
-                        <outlet property="usernameLabel" destination="OSS-LN-T99" id="uG3-M8-EUg"/>
+                        <outlet property="passwordLabel" destination="OSS-LN-T99" id="6ct-Fc-NmU"/>
+                        <outlet property="passwordTextField" destination="Kg3-UW-4T0" id="1dj-IZ-IRY"/>
+                        <outlet property="usernameLabel" destination="w75-hp-qp9" id="wvx-fe-zmB"/>
+                        <outlet property="usernameTextField" destination="8FM-Lj-4Hx" id="UAl-WW-Zpu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

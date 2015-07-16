@@ -10,14 +10,17 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordLabel: UILabel!
     
     var kbHeight: CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textField.delegate = self
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,8 +29,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        if textField == usernameTextField {
+            passwordTextField.becomeFirstResponder()
+        }else {
+            passwordTextField.resignFirstResponder()
+        }
+        
+//        textField.resignFirstResponder()
         return true
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
     
     override func viewDidAppear(animated: Bool) {
